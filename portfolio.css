@@ -88,14 +88,32 @@ section {
 
 .home{
   display: flex;
+  padding-top: 20rem;
   justify-content: center;
-  align-items: center;
+  /* flex-direction: column; */
+  /* align-items: center;  */
+  /* text-align: center; */
+  /* gap: 1.5rem; */
 }
 .home-content h3{
   font-size: 3.2rem;
   font-weight:700 ;
 }
+.home-container {
+  display: flex;
+  /* flex-direction: row; Align content and image side-by-side */
+  justify-content: space-between;
+  align-items:flex-start;
+  /* align-items: center; */
+  max-width: 1200px;
+  width: 100%;
+  gap: 2rem; /* Add space between content and image */
+}
 
+.home-content{
+  flex: 1;
+  text-align: left;
+}
 .home-content h3:nth-of-type(2){
   margin-bottom: 2rem;
 }
@@ -103,4 +121,71 @@ span{
   color: var(--main-color);
 }
 
-/* Continiue with 13:49 */
+/* Continiue with 13:49  */
+
+.home-img img {
+  
+  width: 25vw;
+  animation: floatImage 4s ease-in-out infinite;
+}
+
+@keyframes floatImage{
+  0% {
+    transform: translateY(0);
+  }
+  50%{
+    transform: translateY(-2.4rem);
+  }
+  100%{
+    transform: translateY(0);
+  }
+}
+.home-bg img {
+  width: 25vw;
+  border-radius: 50%;
+  animation: floatImage 4s ease-in-out infinite; /* Animation properties */
+}
+.home-content p{
+  font-size: 1.6rem;
+}
+.socialmedia{
+  display: flex;
+  justify-content: flex-start;
+  gap: 1rem;
+}
+.socialmedia a {
+  display: inline-flex;
+  /* flex-direction: column; */
+  justify-content: center;
+  align-items: center;
+  width: 4rem;
+  height: 4rem;
+  background: transparent;
+  border: .2rem solid var(--main-color); 
+  border-radius: 2rem;
+  font-size: 2rem;
+  color: var(--main-color);
+  margin: 3rem 1.5rem 3rem 0;
+  transition: .5s ease;
+}
+.socialmedia a:hover{
+  background: var(--main-color);
+  color: var(--snd-bf-color);
+  box-shadow: 0 0 1rem var(--main-color);
+}
+.btn {
+  margin-top: 2rem;
+  padding: 0.8rem 2rem;
+  font-size: 1.6rem;
+  color: var(--bg-color);
+  background-color: var(--main-color);
+  border: 0.2rem solid var(--main-color);
+  border-radius: 1.5rem;
+  transition: all 0.3s ease;
+}
+
+.btn:hover {
+  background-color: var(--hover-color);
+  color: var(--text-color);
+  border-color: var(--hover-color);
+}
