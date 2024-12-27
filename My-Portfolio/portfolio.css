@@ -1,0 +1,284 @@
+/* Import some font from the google font */
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+/* Mistakes 
+1) Extra top padding in the home section
+*/
+
+
+
+/* Defult setting of my web page */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  border: none;
+  scroll-behavior: smooth;
+  outline: none;
+  text-decoration: none;
+  font-family: "Nunito", sans-serif;
+}
+
+
+:root {
+  --bg-color: #191f36;
+  --snd-bf-color: #262B40;
+  --text-color: #fff;
+  --main-color: #59B2F4
+}
+
+
+
+html {
+  font-size: 62.5%;
+  overflow-x: hidden;
+}
+
+body {
+  background: var(--bg-color);
+  color: var(--text-color);
+}
+
+section {
+  min-height: 100vh;
+  padding: 10rem 9% 2rem;
+}
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 2rem 9%;
+  background: var(--bg-color);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 100;
+}
+
+.logo {
+  font-size: 2.5rem;
+  color: var(--text-color);
+  font-weight: 700;
+  cursor: default;
+}
+
+.navbar a {
+  font-size: 1.5rem;
+  color: var(--text-color);
+  margin-left: 3.5rem;
+  font-weight: 700;
+  text-decoration: none;
+
+}
+
+/* Remember : In this hover section i will add sequential underline effect  */
+.navbar a:hover {
+  text-decoration: underline;
+  color: var(--text-color);
+}
+
+.navbar a.active {
+  text-decoration: underline;
+  color: var(--text-color);
+}
+
+/* Menu btn is not working i have to check it later */
+#menu-icon {
+  font-size: 3.6rem;
+  color: var(--text-color);
+  display: none;
+}
+
+.home {
+  display: flex;
+  padding-top: 20rem;
+  justify-content: center;
+  /* flex-direction: column; */
+  /* align-items: center;  */
+  /* text-align: center; */
+  /* gap: 1.5rem; */
+}
+
+.home-content h3 {
+  font-size: 3.2rem;
+  font-weight: 700;
+}
+
+.home-container {
+  display: flex;
+  /* flex-direction: row; Align content and image side-by-side */
+  justify-content: space-between;
+  align-items: flex-start;
+  /* align-items: center; */
+  max-width: 1200px;
+  width: 100%;
+  gap: 2rem;
+  /* Add space between content and image */
+}
+
+.home-content {
+  flex: 1;
+  text-align: left;
+}
+
+.home-content h3:nth-of-type(2) {
+  margin-bottom: 2rem;
+}
+
+span {
+  color: var(--main-color);
+}
+
+/* Continiue with 13:49  */
+
+.home-img img {
+
+  width: 2vw;
+  animation: floatImage 4s ease-in-out infinite;
+}
+
+@keyframes floatImage {
+  0% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-2.4rem);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.home-bg img {
+  width: 20vw;
+  border-radius: 50%;
+  animation: floatImage 4s ease-in-out infinite;
+  /* Animation properties */
+  box-shadow: 0 0 10px var(--main-color);
+}
+
+.home-content p {
+  font-size: 1.6rem;
+}
+
+.socialmedia {
+  display: flex;
+  justify-content: flex-start;
+  gap: 1rem;
+}
+
+.socialmedia a {
+  display: inline-flex;
+  /* flex-direction: column; */
+  justify-content: center;
+  align-items: center;
+  width: 4rem;
+  height: 4rem;
+  background: transparent;
+  border: .2rem solid var(--main-color);
+  border-radius: 2rem;
+  font-size: 2rem;
+  color: var(--main-color);
+  margin: 3rem 1.5rem 3rem 0;
+  transition: .5s ease;
+}
+
+.socialmedia a:hover {
+  background: var(--main-color);
+  color: var(--snd-bf-color);
+  box-shadow: 0 0 1rem var(--main-color);
+}
+
+.btn {
+  margin-top: 2rem;
+  padding: 0.8rem 2rem;
+  font-size: 1.6rem;
+  color: var(--bg-color);
+  background-color: var(--main-color);
+  box-shadow: 0 0 1rem var(--main-color);
+  border: 0.2rem solid var(--main-color);
+  border-radius: 1.5rem;
+  transition: 0.3s ease;
+}
+
+.home .btn:hover {
+  box-shadow: none;
+  transform: translateY(-10px);
+  background-color: var(--hover-color);
+  color: var(--text-color);
+  border-color: var(--hover-color);
+}
+.about {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  padding: 2rem; /* Optional: Add padding to ensure spacing around content */
+  background: var(--snd-bf-color);
+  flex-wrap: wrap; /* Ensure elements stack on smaller screens */
+}
+
+.heading {
+  text-align: center;
+  font-size: 4.5rem;
+}
+
+.about-content {
+  max-width: 600px; /* Limit the width of the content for better alignment */
+}
+
+.about-content h2 {
+  text-align: left;
+  line-height: 1.2;
+}
+
+.about-content h3 {
+  font-size: 2.6rem;
+}
+
+.about-content p {
+  font-size: 1.6rem;
+  margin: 2rem 0 3rem; /* Fixed the typo */
+}
+
+.about .btn {
+  margin-top: 2rem;
+  padding: 0.8rem 2rem;
+  font-size: 1.6rem;
+  color: var(--bg-color);
+  background-color: var(--main-color);
+  box-shadow: 0 0 1rem var(--main-color);
+  border: 0.2rem solid var(--main-color);
+  border-radius: 1.5rem;
+  transition: 0.3s ease;
+}
+.about .btn:hover {
+  box-shadow: none;
+  transform: translateY(-10px);
+  background-color: var(--hover-color);
+  color: var(--text-color);
+  border-color: var(--hover-color);
+}
+
+@media (max-width: 768px) {
+  .about {
+    flex-direction: column; /* Stack items vertically on smaller screens */
+    text-align: center; /* Align text centrally on small screens */
+  }
+
+  .about-content {
+    max-width: 100%; /* Allow full width on small screens */
+  }
+  .home{
+    flex-direction: column;
+    text-align: center;
+  }
+  .home-content{
+    max-width: 100%;
+  }
+}
+
