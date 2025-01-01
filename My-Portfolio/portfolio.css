@@ -37,6 +37,8 @@ html {
 body {
   background: var(--bg-color);
   color: var(--text-color);
+  display: flex;
+  flex-direction: column;
 }
 
 section {
@@ -58,17 +60,18 @@ section {
 }
 
 .logo {
-  font-size: 2.5rem;
+  font-size: 3rem;
   color: var(--text-color);
-  font-weight: 700;
+  font-weight: 500;
   cursor: default;
 }
 
 .navbar a {
-  font-size: 1.5rem;
+  justify-content: right;
+  font-size: 3rem;
   color: var(--text-color);
   margin-left: 3.5rem;
-  font-weight: 700;
+  font-weight: 500;
   text-decoration: none;
 
 }
@@ -93,16 +96,21 @@ section {
 
 .home {
   display: flex;
-  padding-top: 20rem;
+  padding-top: 30rem;
   justify-content: center;
+  /* justify-items: center; */
   /* flex-direction: column; */
-  /* align-items: center;  */
+  align-items:flex-start; 
   /* text-align: center; */
   /* gap: 1.5rem; */
 }
 
 .home-content h3 {
-  font-size: 3.2rem;
+  font-size: 4.2rem;
+  font-weight: 700;
+}
+.home-content h1 {
+  font-size: 2.2rem;
   font-weight: 700;
 }
 
@@ -218,13 +226,13 @@ span {
   align-items: center;
   gap: 2rem;
   padding: 2rem; /* Optional: Add padding to ensure spacing around content */
-  background: var(--snd-bf-color);
+  background: var(--bg-color);
   flex-wrap: wrap; /* Ensure elements stack on smaller screens */
 }
 
 .heading {
   text-align: center;
-  font-size: 4.5rem;
+  font-size: 5.5rem;
 }
 
 .about-content {
@@ -237,11 +245,11 @@ span {
 }
 
 .about-content h3 {
-  font-size: 2.6rem;
+  font-size: 3.2rem;
 }
 
 .about-content p {
-  font-size: 1.6rem;
+  font-size: 2.6rem;
   margin: 2rem 0 3rem; /* Fixed the typo */
 }
 
@@ -264,6 +272,7 @@ span {
   border-color: var(--hover-color);
 }
 
+
 @media (max-width: 768px) {
   .about {
     flex-direction: column; /* Stack items vertically on smaller screens */
@@ -282,3 +291,80 @@ span {
   }
 }
 
+/* CSS for knowladge section  */
+.knowladge h2 {
+  padding-top: 5rem;
+  /* margin-top: 10rem; */
+  margin-bottom: 2.5rem;
+  /* font-size: 3rem; Adjusted for better fit */
+  color: var(--main-color);
+  text-align: center;
+}
+.knowladge h2 span{
+  color: var(--text-color);
+}
+.knowladge-container {
+  display: flex;
+  flex-wrap: wrap;
+  padding-top: 8rem;
+  justify-content: center;
+  gap: 20px;
+  max-width: 1200px;
+  margin: 0 auto; /* Centers the container */
+}
+@keyframes appear {
+  from {
+    opacity: 0;
+    transform: scale(0.5); /* Changed from `scale` to `transform` */
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.knowladge-box,
+.knowladge-box2 {
+  background-color: var(--snd-bf-color);
+  border-radius: 12px;
+  padding: 30px;
+  width: calc(100% / 3 - 40px); /* Ensures 3 cards per row */
+  text-align: center;
+  animation: appear 0.8s ease-in-out; /* Applied animation */
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.knowladge-box:hover,
+.knowladge-box2:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 12px 20px var(--hover-color);
+  box-shadow: 0 8px 15px var(--main-color);
+}
+
+.knowladge-box h3,
+.knowladge-box2 h3 {
+  padding-top: 2rem;
+  font-size: 2.5rem;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  word-wrap: break-word;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: normal;
+  margin-bottom: 1.5rem;
+  color: var(--text-color);
+}
+
+.knowladge-box i,
+.knowladge-box2 i {
+  font-size: 4rem;
+  color: var(--main-color);
+}
+
+.knowladge-box p,
+.knowladge-box2 p {
+  font-size: 0.9rem;
+  color: var(--text-color);
+  margin-bottom: 20px;
+}
