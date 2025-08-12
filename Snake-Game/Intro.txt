@@ -1,0 +1,25 @@
+Snake Game 
+
+
+Problem Statement :- 
+
+    Construct a Snake game which take user input for moving or changing his directions  and also increase the size of snake 
+
+
+
+Solution :- 
+
+
+Step wise procedure :- 
+
+
+1) Construct a method name frame . Which consist of frame of the game . frame means the area in which snake will move 
+
+2) Construct a method which show the initial position of snake and food . 
+
+3) Their is also the method name input . This function take user input for changing the directions of the snake . 
+
+4) Another method name random which help food take diffrent diffrent position after eatting by the snake 
+
+5) Their is a last function which help in for increase the lenght of the snake and snake body follow the head of the snake 
+
