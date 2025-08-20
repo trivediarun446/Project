@@ -1,0 +1,1 @@
+screen_x, screen_y

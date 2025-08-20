@@ -1,47 +1,81 @@
 import pygame 
 import random
+# Pygame initialization 
+pygame.init()
 
-# Initializing the pygame 
-pygame.init() 
 
-# set the length and breath of the pygame window 
-window = pygame.display.set_mode((800 , 600))
-
-# set the Window name 
+# Screen Configuration 
+screen_x , screen_y = 800 , 600 
+window = pygame.display.set_mode((screen_x, screen_y))
 pygame.display.set_caption("Snake Game")
 
-# For continuous running of the window
-runing = True 
 
-
-#  Here some important varible 
-Player_Name = ""
+# Score 
 score = 0 
-Diffculty_level = ""  
+clock = pygame.time.Clock()
+
+# Snake Configuration 
+snake_size = 10 
+snake_speed = 15    
+snake_length = 1 
+snake = [] 
+snake_head = pygame.Rect( screen_x/2 , screen_y/2 , snake_size , snake_size )
 
 
+# Food Configuration 
+food = pygame.Rect(
+    round(random.randrange(0,screen_x-snake_size) / 10 )*10.0 , 
+    round(random.randrange(0 , screen_y - snake_size)/10)*10.0 , 
+    snake_size , snake_size 
+)
+
+# Initial starting condition of loop 
+runing = True 
+x = 0 
+y = 0 
+direction = "stop" 
 
 
+# Main Game Loop 
 while runing :
-    for event in pygame.event.get():
-        if event.type == pygame.QUIT:
-            runing = False 
+     
+     for event in pygame.event.get():
+          if event.type == pygame.QUIT :
+               runing = False 
+          if event.type == pygame.KEYDOWN:
+               if event.key == pygame.K_UP and direction != "down":
+                    y -= snake_size 
+                    x = 0 
+                    direction = "Up"
+               elif event.key == pygame.K_DOWN and direction != "Up":
+                    y += snake_size 
+                    x = 0 
+                    direction = "down"
+               elif event.key == pygame.K_LEFT and direction != "Right":
+                    x-= snake_size 
+                    y = 0 
+                    direction = "Left"
+               elif event.key == pygame.K_RIGHT and direction != "Left":
+                    x+= snake_size 
+                    y = 0 
+                    direction = "Right"
+     
+     
+     # Collision detection 
+     # if snake_head.x >= screen_x or snake_head.y <= screen_y or snake_head.x < 0 or snake_head.y < 0: 
+     #      runing = False 
+     
+     snake_head.x += x 
+     snake_head.y += y 
 
-    for row in range(1 , 791 , 1 ):
-        for col in range( 1 , 591 , 1):
-            if row == 1 or row == 790 or col== 1 or col == 590:
-                    #  b_rect = pygame.Rect()
-                     pygame.draw.rect(window , (0 , 255 , 0 ) , (row , col ,10,10))
+     window.fill((0,0,0))
 
-    # snake_head = pygame.Rect() 
-    pygame.draw.rect(window,(255,255,255), (800/2 , 600/2 , 10 , 10))
-    pos_x = random.randint(2 , 789)
-    pos_y = random.randint(2 , 589)
-    if pos_x == 800/2 and pos_y == 600/2:
-        pygame.draw.circle(window,(0,0,255) ,( pos_x % 790 , pos_y % 590 ) , 10)
-    else:
-        pygame.draw.circle(window,(0,0,255) ,( 500 , 400 ) , 10)
-         
-    pygame.display.flip()
+     pygame.draw.rect(window ,(255,0,0) , food) 
+
+     pygame.display.flip()
+
+
+     # clock.tick(snake_speed)
 
 pygame.quit()
+
