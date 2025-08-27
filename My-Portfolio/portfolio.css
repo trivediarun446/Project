@@ -222,7 +222,8 @@ span {
 }
 .about {
   display: flex;
-  justify-content: center;
+  justify-content: start;
+  margin-left: 15rem;
   align-items: center;
   gap: 2rem;
   padding: 2rem; /* Optional: Add padding to ensure spacing around content */
@@ -237,6 +238,8 @@ span {
 
 .about-content {
   max-width: 600px; /* Limit the width of the content for better alignment */
+  /* align-items: flex-start; */
+  margin-right: 15rem;
 }
 
 .about-content h2 {
@@ -293,9 +296,9 @@ span {
 
 /* CSS for knowladge section  */
 .knowladge h2 {
-  padding-top: 5rem;
+  padding-top: 3rem;
   /* margin-top: 10rem; */
-  margin-bottom: 2.5rem;
+  margin-bottom: 1.5rem;
   /* font-size: 3rem; Adjusted for better fit */
   color: var(--main-color);
   text-align: center;
