@@ -43,7 +43,7 @@ body {
 
 section {
   min-height: 100vh;
-  padding: 10rem 9% 2rem;
+  padding: 8rem 9% 2rem;
 }
 
 .header {
@@ -96,7 +96,7 @@ section {
 
 .home {
   display: flex;
-  padding-top: 30rem;
+  padding-top: 18rem;
   justify-content: center;
   /* justify-items: center; */
   /* flex-direction: column; */
