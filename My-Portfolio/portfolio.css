@@ -484,3 +484,166 @@ span {
     font-size: 1.6rem; 
     margin: 1rem 0 3rem;
 }
+
+/* Intership section khtm  */
+
+/* Yaha se contact section start  */
+
+.contact form{
+  max-width: 70rem;
+  margin: 1rem auto;
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.contact form .input-box{
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.contact form .input-box input,
+.contact form textarea{
+  width: 100%;
+  padding: 1.5rem; 
+  font-size: 1.6rem;
+  color: var(--text-color);
+  background: var(--snd-bf-color);
+  border-radius: .8rem;
+  margin: .7rem 0 ; 
+}
+.contact form .input-box input{
+  width:49% ; 
+}
+.contact form textarea{
+  resize: none;
+}
+.contact form .btn{
+  margin-top: 2rem;
+  cursor: pointer;
+}
+
+
+/* For responsive page */
+
+/* =======================================
+   RESPONSIVE MEDIA QUERIES
+======================================= */
+
+/* For Laptops / Small Desktops */
+@media (max-width: 1200px) {
+  html {
+    font-size: 55%; /* 1rem = 5.5px, saari text thodi choti ho jayegi */
+  }
+  .knowladge-box, .knowladge-box2 {
+    width: calc(100% / 2 - 40px); /* Knowledge cards 2 per row */
+  }
+}
+
+/* For Tablets */
+@media (max-width: 991px) {
+  .header {
+    padding: 2rem 3%;
+  }
+  .about {
+    margin-left: 0;
+    justify-content: center;
+  }
+  .about-content {
+    margin-right: 0;
+    text-align: center;
+  }
+  section {
+    padding: 10rem 3% 2rem;
+  }
+  .services {
+      padding-bottom: 7rem;
+  }
+  .portfolio {
+    padding-bottom: 7rem;
+  }
+}
+
+/* For Large Mobile Phones / Small Tablets */
+@media (max-width: 768px) {
+  #menu-icon {
+    display: block; 
+  }
+  .about {
+    flex-direction: column;
+    margin-left: 0;
+    padding: 8rem 5%; 
+  }
+  .about-content {
+    margin-right: 0;
+    max-width: 100%;
+  }
+ 
+  .navbar {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    padding: 1rem 3%;
+    background: var(--bg-color);
+    border-top: .1rem solid rgba(0, 0, 0, .2);
+    box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .2);
+    display: none;
+  }
+  
+  .navbar.active {
+    display: block;
+  }
+
+  .navbar a {
+    display: block;
+    font-size: 2rem;
+    margin: 3rem 0;
+  }
+
+  /* Home Section Alignment */
+  .home {
+    flex-direction: column;
+    padding-top: 12rem; 
+  }
+  .home-content h3 {
+    font-size: 2.6rem;
+  }
+  .home-content h1 {
+    font-size: 5rem;
+  }
+  .home-img img, .about-img img {
+    width: 70vw; 
+    margin-top: 4rem;
+  }
+
+  
+  .portfolio-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .knowladge-box, .knowladge-box2 {
+    width: 100%; 
+  }
+}
+
+/* For Small Mobile Phones (Mobiles) */
+@media (max-width: 615px) {
+  
+  .portfolio-container {
+    grid-template-columns: 1fr;
+  }
+  
+  
+  .home-img img {
+    width: 80vw;
+  }
+}
+
+/* For Very Small Screens */
+@media (max-width: 450px) {
+  html {
+    font-size: 50%;
+  }
+  .home-content h1 {
+    font-size: 4rem;
+  }
+}
