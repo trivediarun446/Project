@@ -371,3 +371,89 @@ span {
   color: var(--text-color);
   margin-bottom: 20px;
 }
+
+
+/* CSS for project section start date is 11/06/2026 */
+/* Yeh hamra project wala section hai  */
+.project h2{
+  margin-bottom: 5rem;
+}
+
+.project-container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+  margin-top: 3rem;
+}
+
+.project-container .project-box{
+  flex: 1 1 30rem;
+  background: var(--snd-bf-color);
+  padding: 3rem 2rem 4rem;
+  border-radius: 2rem;
+  text-align: center;
+  border: .2rem solid var(--bg-color);
+  transition: .5s ease;
+}
+
+.project-container .project-box:hover{
+  border-color: var(--main-color);
+  transform: scale(1.02);
+
+}
+
+.project-box i{
+  font-size: 7rem;
+  color:var(--main-color) ; 
+}
+
+.project-box p{
+    font-size: 1.6rem; 
+    margin: 1rem 0 3rem;
+}
+
+/* Yaha project wala section khtm ho gaya hai  */
+
+
+/* Ab yaha se internship wala section start  */
+
+.intership h2{
+  margin-bottom: 5rem;
+}
+
+.intership-container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+  margin-top: 3rem;
+}
+
+.intership-container .intership-box{
+  flex: 1 1 30rem;
+  background: var(--snd-bf-color);
+  padding: 3rem 2rem 4rem;
+  border-radius: 2rem;
+  text-align: center;
+  border: .2rem solid var(--bg-color);
+  transition: .5s ease;
+}
+
+.intership-container .intership-box:hover{
+  border-color: var(--main-color);
+  transform: scale(1.02);
+
+}
+
+.intership-box i{
+  font-size: 7rem;
+  color:var(--main-color) ; 
+}
+
+.intership-box p{
+    font-size: 1.6rem; 
+    margin: 1rem 0 3rem;
+}
