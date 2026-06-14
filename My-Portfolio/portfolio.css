@@ -24,7 +24,7 @@
   --bg-color: #191f36;
   --snd-bf-color: #262B40;
   --text-color: #fff;
-  --main-color: #59B2F4
+  --main-color: #59B2F4 ;
 }
 
 
@@ -83,7 +83,7 @@ section {
 }
 
 .navbar a.active {
-  text-decoration: underline;
+  text-decoration: none;
   color: var(--text-color);
 }
 
