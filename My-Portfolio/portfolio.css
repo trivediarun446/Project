@@ -294,22 +294,51 @@ span {
   }
 }
 
-/* CSS for knowladge section  */
-.knowladge h2 {
-  padding-top: 3rem;
+/* CSS for knowladge section   */
+/* .knowladge h2 {
+  padding-top: 1rem;
   /* margin-top: 10rem; */
-  margin-bottom: 1.5rem;
+  /* margin-bottom: 1.5rem; */
   /* font-size: 3rem; Adjusted for better fit */
-  color: var(--main-color);
+  /* color: var(--main-color);
   text-align: center;
+} */
+.knowladge h2 {
+  padding-top: 1rem; /* Upar se thoda space taaki navbar se na chipke */
+  margin-bottom: 0.1rem; /* Heading aur boxes ke beech ek perfect distance */
+  color: var(--main-color);
+  font-size: 5rem;
+  text-align: center;
+}
+
+/* .knowladge-container {
+  display: flex;
+  flex-wrap: wrap;
+  padding-top: 0; /* Yahan se extra padding hata di jo boxes ko neeche dhakel rahi thi */
+  /* padding-bottom: 5rem; /* Niche thoda space add kiya taaki aane wale agle section se proper gap bane */
+  /* justify-content: center; */
+  /* gap: 2.5rem; Boxes ke beech ka horizontal aur vertical gap */
+  /* max-width: 1200px; */
+  /* margin: 0 auto;  */
+/* }  */ 
+.knowladge-container {
+  display: flex;
+  flex-wrap: wrap;
+  padding-top: 0; /* Yahan se extra padding hata di jo boxes ko neeche dhakel rahi thi */
+  padding-bottom: 5rem; /* Niche thoda space add kiya taaki aane wale agle section se proper gap bane */
+  justify-content: center;
+  gap: 2.5rem; /* Boxes ke beech ka horizontal aur vertical gap */
+  max-width: 1200px;
+  margin: 0 auto; 
 }
 .knowladge h2 span{
   color: var(--text-color);
 }
 .knowladge-container {
+  /* margin-top: 2rem; */
   display: flex;
   flex-wrap: wrap;
-  padding-top: 8rem;
+  padding-top: 3rem;
   justify-content: center;
   gap: 20px;
   max-width: 1200px;
@@ -328,6 +357,8 @@ span {
 
 .knowladge-box,
 .knowladge-box2 {
+  /* padding-top: 2rem; */
+  font-size: 2rem;
   background-color: var(--snd-bf-color);
   border-radius: 12px;
   padding: 30px;
@@ -387,13 +418,22 @@ span {
   margin-bottom: 4rem;
 
 }
-.project-container{
+/* .project-container{
   display: grid;
-  grid-template-columns: repeat(3,1fr) ;
+  grid-template-columns: repeat(2,1fr) ;
   align-items: center;
   gap:2.5rem ; 
+} */
+.project-container {
+  display: grid;
+  /* 3 ki jagah 2 columns set kar do */
+  grid-template-columns: repeat(2, 1fr); 
+  align-items: center;
+  justify-content: center;
+  gap: 5rem; 
+  max-width: 900px; 
+  margin: 0 auto; 
 }
-
 .project-container .project-box{
   position: relative;
   border-radius: 2rem;
@@ -413,6 +453,7 @@ span {
 .project-box .project-layer{
   position: absolute ;
   bottom: 0 ; 
+  font-size: 2rem;
   left :0 ; 
   width: 100% ; 
   height :100% ; 
@@ -446,43 +487,53 @@ span {
 /* Yaha project wala section khtm ho gaya hai  */
 /* Ab yaha se internship wala section start  */
 
-.intership h2{
+/* Spelling fix: 'internship' kar diya hai taaki HTML se match ho jaye */
+.internship h2 {
   margin-bottom: 5rem;
 }
 
-.intership-container{
+.intership-container {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
   gap: 2rem;
   margin-top: 3rem;
+  padding: 0 2rem; /* Mobile devices par side se chipke na, isliye thodi padding */
 }
 
-.intership-container .intership-box{
-  flex: 1 1 30rem;
+.intership-container .intership-box {
+  /* Ek box ko poori screen par failne se rokne ke liye width set ki hai */
+  flex: 0 1 80rem; /* Box thoda bada aur center mein rahega */
   background: var(--snd-bf-color);
-  padding: 3rem 2rem 4rem;
+  padding: 4rem; /* Padding thodi badha di hai taaki andar ka text saaf dikhe */
   border-radius: 2rem;
   text-align: center;
   border: .2rem solid var(--bg-color);
   transition: .5s ease;
 }
 
-.intership-container .intership-box:hover{
+.intership-container .intership-box:hover {
   border-color: var(--main-color);
   transform: scale(1.02);
-
 }
 
-.intership-box i{
+.intership-box i {
   font-size: 7rem;
-  color:var(--main-color) ; 
+  color: var(--main-color);
+  margin-bottom: 1.5rem; /* Icon ke neeche thoda gap de diya */
 }
 
-.intership-box p{
-    font-size: 1.6rem; 
-    margin: 1rem 0 3rem;
+.intership-box h3 {
+  font-size: 3rem;
+  margin-bottom: 2rem;
+}
+
+.intership-box p {
+  font-size: 1.6rem;
+  line-height: 1.8; /* Lines ke beech gap badhaya hai taaki padhne mein aasaani ho */
+  margin: 1rem 0;
+  text-align: justify; /* Paragraph ko dono taraf se barabar align karne ke liye */
 }
 
 /* Intership section khtm  */
